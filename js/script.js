@@ -54,7 +54,7 @@ ScrollReveal().reveal('.home-content p, .skills-column', { origin: 'right' });
 var x = window.location.href;
 if(!x.includes('service')) {
     const typed = new Typed('.multiple-text', {
-        strings: ['.Net Developer', 'Software Tester', 'YouTuber'],
+        strings: ['.Net Developer', 'Software Tester', 'Traveller'],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
