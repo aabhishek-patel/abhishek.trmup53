@@ -136,7 +136,7 @@ span {
     font-size: 1.6rem;
 }
 
-.social-media a {
+/*.social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +172,489 @@ span {
 
 .btn:hover {
     box-shadow: none;
+}*/
+
+/* ---------------------- Social Media --------------------- */
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+  }
+
+  .wrapper a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+  .wrapper a:hover{
+    color: var(--text-color);
+  }
+
+  .wrapper .icon {
+    position: relative;
+    background: transparent;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    padding: 15px;
+    margin: 3rem 2rem 3rem 0;
+    width: 45px;
+    height: 45px;
+    font-size: 19px;
+    color:var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background:var(--main-color);
+    color: var(--main-color);
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px var(--main-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: var(--main-color);
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover {
+    border: transparent;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px var(--text-color);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: var(--text-color);
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: var(--text-color);
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: var(--text-color);
+  }
+  
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background: #0077b5;
+    color: var(--text-color);
+  }
+
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: var(--text-color);
+  }
+  
+  .wrapper .whatsapp:hover,
+  .wrapper .whatsapp:hover .tooltip,
+  .wrapper .whatsapp:hover .tooltip::before {
+    background: #075E54;
+    color:var(--text-color);
+  }
+
+
+  /* ---------------------- Download Button --------------------- */
+.cv {
+    --background: #275efe;
+    --rectangle: #24bfd3;
+    --success: #0a8292;
+    --text: #323946;
+    --arrow: #323946;
+    --checkmark: #1f242d;
+    --bg-color: #1f242d;
+    --second--bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #00eeff;
+    --shadow: rgba(10, 22, 50, .24);
+    display: flex;
+    overflow: hidden;
+    text-decoration:none;
+    -webkit-mask-image: -webkit-radial-gradient(rgb(209, 42, 42), black);
+    background: var(--main-color);
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px -1px var(--main-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .cv:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 4px -1px var(--shadow);
+  }
+
+  .cv ul {
+    margin: 0;
+    padding: 16px 40px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    -webkit-backface-visibility:
+     hidden;
+    backface-visibility: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--bg-color);
+  }
+
+  .cv ul li:not(:first-child)
+    {
+      top: 16px;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    .cv ul li:nth-child(2) {
+      top: 76px;
+    }
+
+    .cv ul li:nth-child(3) {
+      top: 136px;
+    }
+
+    .cv>div {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      background: var(--rectangle);
+    }
+
+    .cv>div:before,
+    .cv>div:after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    .cv>div:before {
+      border-radius: 1px;
+      width: 2px;
+      top: 50%;
+      left: 50%;
+      height: 17px;
+      margin: -9px 0 0 -1px;
+      background: var(--arrow);
+    }
+
+    .cv>div:after {
+      width: 60px;
+      height: 60px;
+      transform-origin: 50% 0;
+      border-radius: 0 0 80% 80%;
+      background: var(--success);
+      top: 0;
+      left: 0;
+      transform: scaleY(0);
+    }
+
+    .cv>div svg {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 50%;
+      top: 50%;
+      margin: -9px 0 0 -10px;
+      fill: none;
+      z-index: 1;
+      stroke-width: 2px;
+      stroke: var(--arrow);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .cv.loading ul {
+      -webkit-animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+      animation: text calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    .cv.loading>div:before {
+      -webkit-animation: line calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+      animation: line calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    .cv.loading>div:after {
+      -webkit-animation: background calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+      animation: background calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    .cv.loading>div svg {
+      -webkit-animation: svg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+      animation: svg calc(var(--duration) * 1ms) linear forwards calc(var(--duration) * .065ms);
+    }
+
+    @-webkit-keyframes text {
+
+        10%,
+        85% {
+          transform: translateY(-100%);
+        }
+  
+        95%,
+        100% {
+          transform: translateY(-200%);
+        }
+      }
+  
+      @keyframes text {
+  
+        10%,
+        85% {
+          transform: translateY(-100%);
+        }
+  
+        95%,
+        100% {
+          transform: translateY(-200%);
+        }
+      }
+  
+      @-webkit-keyframes line {
+  
+        5%,
+        10% {
+          transform: translateY(-30px);
+        }
+  
+        40% {
+          transform: translateY(-20px);
+        }
+  
+        65% {
+          transform: translateY(0);
+        }
+  
+        75%,
+        100% {
+          transform: translateY(30px);
+        }
+      }
+  
+      @keyframes line {
+  
+        5%,
+        10% {
+          transform: translateY(-30px);
+        }
+  
+        40% {
+          transform: translateY(-20px);
+        }
+  
+        65% {
+          transform: translateY(0);
+        }
+  
+        75%,
+        100% {
+          transform: translateY(30px);
+        }
+      }
+  
+      @-webkit-keyframes svg {
+  
+        0%,
+        20% {
+          stroke-dasharray: 0;
+          stroke-dashoffset: 0;
+        }
+  
+        21%,
+        89% {
+          stroke-dasharray: 26px;
+          stroke-dashoffset: 26px;
+          stroke-width: 3px;
+          margin: -10px 0 0 -10px;
+          stroke: var(--checkmark);
+        }
+  
+        100% {
+          stroke-dasharray: 26px;
+          stroke-dashoffset: 0;
+          margin: -10px 0 0 -10px;
+          stroke: var(--checkmark);
+        }
+  
+        12% {
+          opacity: 1;
+        }
+  
+        20%,
+        89% {
+          opacity: 0;
+        }
+  
+        90%,
+        100% {
+          opacity: 1;
+        }
+      }
+  
+      @keyframes svg {
+  
+        0%,
+        20% {
+          stroke-dasharray: 0;
+          stroke-dashoffset: 0;
+        }
+  
+        21%,
+        89% {
+          stroke-dasharray: 26px;
+          stroke-dashoffset: 26px;
+          stroke-width: 3px;
+          margin: -10px 0 0 -10px;
+          stroke: var(--checkmark);
+        }
+  
+        100% {
+          stroke-dasharray: 26px;
+          stroke-dashoffset: 0;
+          margin: -10px 0 0 -10px;
+          stroke: var(--checkmark);
+        }
+  
+        12% {
+          opacity: 1;
+        }
+  
+        20%,
+        89% {
+          opacity: 0;
+        }
+  
+        90%,
+        100% {
+          opacity: 1;
+        }
+      }
+  
+      @-webkit-keyframes background {
+        10% {
+          transform: scaleY(0);
+        }
+  
+        40% {
+          transform: scaleY(0.15);
+        }
+  
+        65% {
+          transform: scaleY(0.5);
+          border-radius: 0 0 50% 50%;
+        }
+  
+        75% {
+          border-radius: 0 0 50% 50%;
+        }
+  
+        90%,
+        100% {
+          border-radius: 0;
+        }
+  
+        75%,
+        100% {
+          transform: scaleY(1);
+        }
+      }
+  
+      @keyframes background {
+        10% {
+          transform: scaleY(0);
+        }
+  
+        40% {
+          transform: scaleY(0.15);
+        }
+  
+        65% {
+          transform: scaleY(0.5);
+          border-radius: 0 0 50% 50%;
+        }
+  
+        75% {
+          border-radius: 0 0 50% 50%;
+        }
+  
+        90%,
+        100% {
+          border-radius: 0;
+        }
+  
+        75%,
+        100% {
+          transform: scaleY(1);
+        }
+      }
+
+      body .container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+      }
+  
+      body .container>div {
+        flex-basis: 100%;
+        width: 0;
+      }
+  
+      body .container .cv {
+        margin: 0;
+      }
+  
+      @media (max-width: 400px) {
+        body .container .cv {
+          margin: 12px;
+        }
+      }
 
 
 /* ---------------------- About 2 --------------------- */
@@ -566,6 +1048,117 @@ span {
 .contact form .btn-box.btns .btn2 {
     cursor: pointer;
 }
+
+
+/* ---------------------- Bubbly Button --------------------- */
+.bubbly-button {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 1em 2em;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--main-color);
+    color: var(--second--bg-color);
+    font-weight: 600;
+    border-radius: 0.8rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 10px var(--main-color);
+  }
+
+  .bubbly-button:focus {
+    outline: 0;
+  }
+
+  .bubbly-button:before,
+  .bubbly-button:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+
+  .bubbly-button:before {
+    display: none;
+    top: -100%;
+    background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--main-color) 20%, transparent 30%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+
+  .bubbly-button:after {
+    display: none;
+    bottom: -100%;
+    background-image: radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--main-color) 15%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%), radial-gradient(circle, var(--main-color) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+
+  .bubbly-button:active {
+    transform: scale(0.9);
+    background-color: var(--main-color);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  }
+
+  .bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+  }
+
+  .bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+
+  @keyframes topBubbles {
+    0% {
+      background-position:
+        5% 90%, 10% 90%, 10% 90%,
+        15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+      background-position:
+        0% 80%, 0% 20%, 10% 40%,
+        20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+      background-position:
+        0% 70%, 0% 10%, 10% 30%,
+        20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%,
+        0% 0%, 0% 0%, 0% 0%,
+        0% 0%, 0% 0%;
+    }
+  }
+
+  @keyframes bottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+
 
 /* --------------------------------- footer---------------------------------- */
 
