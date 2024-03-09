@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    margin: 8%;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second--bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+/* .skills {
+    align-items: center;
+    min-height: auto;
+    padding: 7rem;
+    background: var(--second--bg-color);
+} */
+
+.login-form{
+    position: relative;
+    width: auto;
+    background-color: white;
+    box-shadow: 0px 5px 10px black;
+}
+
+.login-form h2{
+    text-align: center;
+    background-color: #204969;
+    padding: 12px 0px;
+    color: white;
+}
+
+div.login-form form{
+    padding: 2rem 3rem;
+    align-content: center;
+}
+
+div.login-form form div.input-field{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 14px;
+    
+}
+
+div.login-form form div.input-field i{
+    color: var(--main-color);
+    padding: 10px 14px;
+    background-color: #f2f4f6;
+    margin-right: 4px;
+}
+
+div.login-form form div.input-field input {
+    background-color: #f2f4f6;
+    padding: 10px;
+    border: none;
+    padding-left: 15px;
+}
+
+.btn-box .btn2 {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: 15px 14px;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .btn2:hover {
+    color: var(--main-color);
+}
+
+.btn-box .btn2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn2:hover::before {
+    width: 100%;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 13rem;
+}
+
+.btn-box.btns a::before {
+    background: var(--second--bg-color);
+}
+
+div.login-form form div.extra{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

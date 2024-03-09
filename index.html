@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aabhishek_patel Personal Portfolio Website Design | aabhishek_patel</title>
-    
+	
+    <title>Abhishek Patel Portfolio Website Design | aabhishek_patel</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
     <!-- box icon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
@@ -18,7 +22,7 @@
     
     <!-- header design -->
     <header class="header">
-        <a href="#" class="logo">Abhishek Patel</a>
+        <a href="#home" class="logo"><img src="images/logo/mix_logo.png" class="logo"></a>
 
         <i class="bx bx-menu" id="menu-icon"></i>
 
@@ -37,22 +41,23 @@
             <h3>Hello, It's Me</h3>
             <h1>Abhishek Patel</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>Welcome to my portfolio! I am a skilled software tester and 
-                .NET developer dedicated to ensuring top-notch quality and seamless functionality in every project. 
+            <p>Welcome to my portfolio! I am a skilled Automation Tester and 
+                Web Designer dedicated to ensuring top-notch quality and seamless functionality in every project. 
                 With a passion for precision and a keen eye for detail, I excel at identifying and fixing bugs, implementing robust test strategies, and crafting efficient, reliable code. 
-                Explore my work to see how I bring excellence and innovation to software development and testing.</p>
+                Explore my work to see how I bring excellence and innovation to Web Designing and testing</p>
             <div class="social-media">
-                <a href="https://www.facebook.com/abhishekpatel16121997"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://twitter.com/_aabhishekpatel"><i class='bx bxl-twitter' ></i></a>
-                <a href="https://www.instagram.com/aabhishek_patel/"><i class='bx bxl-instagram-alt' ></i></a>
-                <a href="https://www.linkedin.com/in/aabhishek-patel"><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://wa.me/9312721013/?text=Hello%20Abhishek,%20I%20was%20looking%20at%20your%20portfolio."><i class='bx bxl-whatsapp' ></i></a>
+                <a href="https://www.facebook.com/abhishekpatel16121997" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://twitter.com/_aabhishekpatel" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/aabhishek_patel/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.linkedin.com/in/aabhishek-patel" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://wa.me/9312721013/?text=Hello%20Abhishek,%20I%20was%20looking%20at%20your%20portfolio." target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+				<a href="https://github.com/aabhishek-patel?tab=repositories" target="_blank"><i class='bx bxl-github'></i></a>
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="/download.php" class="btn">Download my CV</a>
         </div>
 
         <div class="home-img">
-            <img src="images/home.png" alt="">
+			<a href="https://www.instagram.com/aabhishek_patel/" target="_blank"><img src="images/final.png" alt=""></a>
         </div>
     </section>
 
@@ -66,7 +71,7 @@
         </div>
 
         <div class="about2-content">
-            <p>Hello, and welcome to my portfolio! I am an enthusiastic software tester and .NET developer with a passion for exploring the world. 
+            <p>Hello, and welcome to my portfolio! I am an enthusiastic Automation Tester and Web Designer with a passion for exploring the world. 
                 With a diverse skill set and a love for both technology and travel, 
                 I bring a unique perspective to my work and personal experiences.
             Click on "Read More" to know more about me.</p>
@@ -126,11 +131,13 @@
                     <div class="education-content">
                         <div class="content">
                                 <div class="year"><i class='bx bxs-calendar' ></i> August, 2021 - Present</div>
-                                <h3>SOFTWARE TESTER - Convene India Pvt Ltd. (Azeus group)</h3>
-                                <p>•Software Testers are responsible for the quality of software development and deployment.<br>
+                                <h3>SOFTWARE TEST ENGINEER - SOFTWARE TESTER - Convene India Pvt Ltd. (Azeus group)</h3>
+                                <p>• Software Testers are responsible for the quality of software development and deployment.<br>
                                     • Analyzing test results on database impacts, errors or bugs, and usability. <br>
                                     • Preparing reports on all aspects related to the software testing carried
-                                    out and reporting to the design team.</p>
+                                    out and reporting to the design team.<br>
+									• Involve in Performing Function , Regression, Integration , Device x Browser Compatibility Testing.<br>
+									• Involved in the Knowledge Transfer to new Joiners and Leading the team.</p>
                         </div>
                     </div>
 
@@ -173,7 +180,7 @@
                         </div>
 
                         <div class="progress">
-                            <h3>.Net <span>90%</span></h3>
+                            <h3>Selenium <span>75%</span></h3>
                             <div class="bar"><span></span></div>
                         </div>
                     </div>
@@ -212,31 +219,31 @@
 
     <!-- contact section design -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+        <h2 class="heading">Get in <span>Touch!</span></h2>
 
-        <form action="#">
+        <form action="form.php" method="post">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" name="fullName" placeholder="Full Name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="email" placeholder="Email Address" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
                     <span class="focus"></span>
                 </div>
             </div>
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
+                    <input type="number" name="mobile" placeholder="Mobile Number" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
+                    <input type="text" name="emailSub" placeholder="Email Subject" required>
                     <span class="focus"></span>
                 </div>
             </div>
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name="msg" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <span class="focus"></span>
             </div>
             <div class="btn-box btns">
